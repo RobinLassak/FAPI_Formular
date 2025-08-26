@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objednávkový systém</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Objednávkový formulář</h1>
+        
+        <form action="process.php" method="POST" id="orderForm">
+            <div class="form-group">
+                <label for="name">Jméno a příjmení:</label>
+                <input type="text" id="name" name="name" placeholder="Zadejte své jméno" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="vas@email.cz" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Telefon:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+420 123 456 789" required>
+            </div>
+
+            <div class="form-group">
+                <label for="product">Výběr produktu:</label>
+                <select id="product" name="product" required>
+                    <option value="">Vyberte produkt</option>
+                    <option value="100">Produkt 1 - 100 Kč</option>
+                    <option value="200">Produkt 2 - 200 Kč</option>
+                    <option value="300">Produkt 3 - 300 Kč</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Počet kusů:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+            </div>
+
+            <div class="price-display">
+                <div id="total-price">Celková cena: 0 Kč</div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submitBtn">Odeslat objednávku</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
