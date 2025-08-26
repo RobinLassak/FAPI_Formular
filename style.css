@@ -1,0 +1,461 @@
+/* Moderní reset a nastavení */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #e9ecef 0%, #ffffff 100%);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 3em;
+    font-weight: 300;
+    background: linear-gradient(135deg, #6c757d, #495057);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    font-weight: 300;
+    text-align: center;
+}
+
+h3 {
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+/* Moderní formulář */
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+input, select {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: white;
+    color: #2c3e50;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #6c757d;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(108, 117, 125, 0.1);
+    transform: translateY(-2px);
+}
+
+input:hover, select:hover {
+    border-color: #9ca3af;
+    background: white;
+}
+
+/* Moderní tlačítko */
+button {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+    padding: 18px 40px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #c82333 0%, #dc3545 100%);
+}
+
+button:active {
+    /* Žádný transform efekt */
+}
+
+/* Moderní zobrazení ceny */
+.price-display {
+    background: #6b7280;
+    padding: 25px;
+    border-radius: 16px;
+    margin: 30px 0;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(107, 114, 128, 0.4);
+}
+
+#total-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Moderní děkovací stránka */
+.order-summary {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 35px;
+    border-radius: 20px;
+    margin-bottom: 35px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.order-details {
+    margin-bottom: 35px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.detail-row:hover {
+    background: rgba(108, 117, 125, 0.05);
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.detail-row span {
+    color: #6c757d;
+    font-weight: 500;
+}
+
+/* Moderní breakdown ceny */
+.price-breakdown {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.price-row:hover {
+    background: rgba(108, 117, 125, 0.02);
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.price-row:last-child {
+    border-bottom: none;
+}
+
+.price-row.total {
+    border-top: 3px solid #6c757d;
+    border-bottom: none;
+    padding-top: 20px;
+    margin-top: 15px;
+    font-size: 20px;
+    color: #6c757d;
+    font-weight: 700;
+    background: linear-gradient(135deg, rgba(108, 117, 125, 0.1) 0%, rgba(73, 80, 87, 0.1) 100%);
+    border-radius: 12px;
+    padding: 20px 15px;
+}
+
+/* Moderní akce */
+.actions {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn {
+    display: inline-block;
+    background: #27ae60;
+    color: white;
+    padding: 16px 35px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    /* Žádná změna barvy */
+}
+
+/* Speciální styly pro thank-you stránku */
+.thank-you-page h1 {
+    font-size: 2.2em;
+    margin-bottom: 25px;
+}
+
+.thank-you-page h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+.thank-you-page h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.thank-you-page .order-summary {
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.thank-you-page .order-details {
+    margin-bottom: 25px;
+}
+
+.thank-you-page .detail-row {
+    padding: 10px 0;
+}
+
+.thank-you-page .price-breakdown {
+    padding: 20px;
+}
+
+.thank-you-page .price-row {
+    padding: 8px 0;
+}
+
+.thank-you-page .price-row.total {
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.thank-you-page .actions {
+    margin-top: 25px;
+}
+
+/* Pokročilý responzivní design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px 0;
+    }
+    
+    .container {
+        margin: 10px;
+        padding: 25px;
+        border-radius: 15px;
+    }
+    
+    h1 {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+    }
+    
+    h2 {
+        font-size: 1.8em;
+    }
+    
+    .detail-row, .price-row {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    
+    .detail-row:hover, .price-row:hover {
+        padding: 15px 10px;
+    }
+    
+    input, select, button {
+        font-size: 16px;
+        padding: 14px 16px;
+    }
+    
+    .price-display {
+        padding: 20px;
+        margin: 25px 0;
+    }
+    
+    .order-summary {
+        padding: 25px;
+    }
+    
+    .price-breakdown {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        margin: 5px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    input, select {
+        padding: 12px 14px;
+    }
+    
+    button {
+        padding: 16px 20px;
+        font-size: 16px;
+    }
+}
+
+/* Moderní validace */
+input:invalid, select:invalid {
+    border-color: #d1d5db;
+    background: white;
+}
+
+input:valid, select:valid {
+    border-color: #d1d5db;
+    background: white;
+}
+
+/* Loading stav */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+    filter: blur(1px);
+}
+
+/* Pokročilé animace */
+@keyframes fadeInUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0; 
+        transform: translateX(-20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+.container {
+    /* Žádná animace - formulář je na pevno */
+}
+
+.form-group {
+    /* Žádná animace - formulářové skupiny jsou na pevno */
+}
+
+/* Hover efekty pro interaktivní prvky */
+.detail-row, .price-row {
+    position: relative;
+}
+
+.detail-row::before, .price-row::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    transition: width 0.3s ease;
+    z-index: -1;
+    border-radius: 8px;
+}
+
+.detail-row:hover::before, .price-row:hover::before {
+    width: 100%;
+}
+
+/* Moderní scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #495057 0%, #6c757d 100%);
+}
