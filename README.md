@@ -1,4 +1,4 @@
-# Objednávkový systém - FAPI Business
+# Objednávkový formular - FAPI Business
 
 ##  Popis projektu
 
@@ -55,6 +55,38 @@ FAPI_Formular/
 2. **Online nasazení**:
    - Nahrajte soubory na webhosting s podporou statických souborů
    - Aplikace je připravena k okamžitému použití
+
+##  Automatické nasazení na webhosting
+
+Aplikace využívá **GitHub Actions** pro automatické nasazení na webhosting:
+
+### **CI/CD Pipeline:**
+- **GitHub Actions**: Automatické nasazení při push do main větve
+- **Workflow soubor**: `.github/workflows/deploy.yml`
+- **Automatické nasazení**: Při každém commitu se aplikace automaticky nasadí
+
+### **Proces nasazení:**
+1. **Push kódu na GitHub**:
+   - Commit změn do main větve
+   - GitHub Actions automaticky spustí deployment
+
+2. **Automatické nasazení**:
+   - Workflow nahrává soubory na webhosting
+   - Používá FTP/SFTP protokol
+   - Nasazuje do veřejné složky webhostingu
+
+3. **Ověření nasazení**:
+   - Automatické testování dostupnosti
+   - Kontrola funkčnosti formuláře
+   - Monitoring deployment status
+
+### **Výhody automatického nasazení:**
+- **Automatizace**: Žádné manuální nahrávání souborů
+- **Rychlost**: Nasazení během několika sekund
+- **Konzistence**: Vždy aktuální verze kódu
+- **Backup**: Historie verzí v Git
+- **Monitoring**: Sledování deployment status
+- **Rollback**: Možnost návratu k předchozí verzi
 
 ##  Klíčové funkce
 
@@ -145,3 +177,4 @@ Tento projekt byl vytvořen jako **vstupní test pro FAPI Business s.r.o.** s c�
 ---
 
 *Projekt je připraven k nasazení a demonstraci všech požadovaných funkcionalit.*
+
